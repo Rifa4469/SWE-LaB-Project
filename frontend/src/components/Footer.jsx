@@ -1,48 +1,64 @@
-import { Link } from 'react-router-dom'
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8 xl:col-span-1">
-            <Link to="/" className="flex items-center">
-              <div className="h-8 w-8 bg-primary-600 rounded-lg"></div>
-              <span className="ml-2 text-xl font-bold">Template</span>
-            </Link>
-            <p className="text-gray-400 text-base">
-              A modern React template with Vite and Tailwind CSS for building beautiful web applications.
+    <footer className="bg-blue-900 text-white">
+      <div className="container mx-auto px-4 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+
+          {/* About */}
+          <div>
+            <h2 className="text-xl font-bold mb-4">TravelGo</h2>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              We empower modern explorers to discover destinations across the globe with confidence and convenience. 
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-                <ul className="mt-4 space-y-4">
-                  <li><a href="#" className="text-base text-gray-300 hover:text-white">Marketing</a></li>
-                  <li><a href="#" className="text-base text-gray-300 hover:text-white">Analytics</a></li>
-                  <li><a href="#" className="text-base text-gray-300 hover:text-white">Commerce</a></li>
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
-                <ul className="mt-4 space-y-4">
-                  <li><a href="#" className="text-base text-gray-300 hover:text-white">Pricing</a></li>
-                  <li><a href="#" className="text-base text-gray-300 hover:text-white">Documentation</a></li>
-                  <li><a href="#" className="text-base text-gray-300 hover:text-white">Guides</a></li>
-                </ul>
-              </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
+              <li><a href="#">Destinations</a></li>
+              <li><a href="#">Tours</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <ul className="space-y-3 text-gray-300 text-sm">
+              <li className="flex items-center gap-2">
+                <FaMapMarkerAlt /> Dhaka, Bangladesh
+              </li>
+              <li className="flex items-center gap-2">
+                <FaPhone /> +880 1234 567890
+              </li>
+              <li className="flex items-center gap-2">
+                <FaEnvelope /> support@travelgo.com
+              </li>
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+            <div className="flex gap-4 text-xl">
+              <a href="#"><FaFacebookF /></a>
+              <a href="#"><FaInstagram /></a>
+              <a href="#"><FaLinkedinIn /></a>
             </div>
           </div>
+
         </div>
-        <div className="mt-12 border-t border-gray-700 pt-8">
-          <p className="text-base text-gray-400 xl:text-center">
-            &copy; {new Date().getFullYear()} React Template. All rights reserved.
-          </p>
+
+        <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400 text-sm">
+          © {new Date().getFullYear()} TravelGo. All Rights Reserved.
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
