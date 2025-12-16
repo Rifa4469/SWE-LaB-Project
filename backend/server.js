@@ -86,7 +86,8 @@ const createAppAndStartServer = async () => {
       
       if (dbConnected) {
         console.log(`📊 DB Name: ${mongoose.connection.name}`);
-        console.log(`🌍 DB Host: ${mongoose.connection.host}`);
+               console.log("🌍 DB Host: TravelEase" );
+
       }
       console.log('=================================');
     });
